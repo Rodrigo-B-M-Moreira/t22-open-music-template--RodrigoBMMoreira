@@ -1,1 +1,47 @@
-/*header.css*/
+header {
+    position: fixed;
+    top: 0;
+     left: 50%;
+    transform: translateX(-50%);
+    width: 1024px;
+    height: 96px;
+    padding: 0 32px;
+    background-color: var(--gray8);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.purple__highlight {
+    color: var(--purple);
+}
+
+.themeChanger {
+    width: 44px;
+    height: 36px;
+    border-radius: 5px;
+    background-image: url('/src/icons/moon--icon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+}
+
+.header__separator {
+    position: fixed;
+    top: 96px;
+    left: 45.4px;
+    width: 1024px;
+    height: 6px;
+    background-color: var(--purple);
+    z-index: 9;
+}

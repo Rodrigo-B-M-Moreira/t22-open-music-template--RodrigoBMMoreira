@@ -1,1 +1,101 @@
 /*albums.css*/
+.albums__container {
+    width: 1024px;
+    height: 1032px;
+    padding-top: 5px;
+    padding-bottom: 32px;
+    gap: 19px;
+}
+
+.albums__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-bottom: 20px;
+}
+
+.albums__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.album__option {
+    width: 308px;
+    height: 455px;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: var(--gray7);
+}
+
+img {
+    width: 308px;
+    height: 290px;
+}
+
+.album__name {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+
+.album__price {
+    font-weight: 600;
+    font-size: 19.2px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.album__info {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.album__purchase {
+    display: flex;
+    justify-content: space-between;
+}
+
+.album__price {
+    font-weight: 600;
+    font-size: 19.2px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.buy__album {
+    width: 87px;
+    height: 40px;
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    gap: 10px;
+    border-radius: 4px;
+    border-width: 1px;
+    background-color: var(--purple);
+    border-style: none;
+}
+
+.album-price__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 0px;
+    letter-spacing: 0%;
+    color: white;
+}

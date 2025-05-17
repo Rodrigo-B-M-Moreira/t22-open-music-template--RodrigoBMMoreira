@@ -1,1 +1,42 @@
 /*price-range*/
+.price-range__container {
+    width: 1024px;
+    height: 164px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    gap: 19px;
+}
+.price-range__info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-range__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    padding-bottom: 10px;
+}
+
+#preco {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+    outline: none;
+    background-color: var(--gray5);
+    border-radius: 0.5rem;
+    height: 0.5rem;
+}
+
+#preco::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 30px;
+    width: 30px;
+    background-color: var(--gray5);
+    border-radius: 50%;
+    border: 0.5rem solid var(--purple);
+}
