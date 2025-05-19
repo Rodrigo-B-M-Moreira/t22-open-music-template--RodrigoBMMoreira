@@ -1,20 +1,33 @@
 import { applyInputRangeStyle } from "./inputRange.js";
-import { albumList } from './albumsDatabase.js';
+import { fetchAlbums } from './api.js';
 import { initThemeToggle } from './theme.js';
 
-function routine() {
+let allAlbums = []; // variável global para armazenar os álbuns da API
+
+async function routine() {
   applyInputRangeStyle();
   initThemeToggle();
-  setupPriceFilter();  
-  renderAlbums(albumList); 
+  allAlbums = await fetchAlbums(); // busca dados da API
+  renderAlbums(allAlbums);
+  setupPriceFilter();
 }
 
 routine();
 
-
 function renderAlbums(albums) {
   const albumsList = document.querySelector('.albums__list');
   albumsList.innerHTML = '';
+
+  if (albums.length === 0) {
+    // Exibe mensagem ou imagem de "nenhum álbum encontrado"
+    albumsList.innerHTML = `
+      <li class="no-albums">
+        <img src="./src/assets/no-results.png" alt="Nenhum álbum encontrado" />
+        <p>Nenhum álbum disponível nesse preço.</p>
+      </li>
+    `;
+    return;
+  }
 
   albums.forEach(album => {
     const albumItem = document.createElement('li');
@@ -69,18 +82,16 @@ function renderAlbums(albums) {
   });
 }
 
-
 function setupPriceFilter() {
   const input = document.querySelector("#preco");
   const priceLabel = document.querySelector(".filter__title b");
 
   input.addEventListener("input", () => {
     const selectedValue = parseFloat(input.value);
-    
     priceLabel.textContent = `R$ ${selectedValue.toFixed(2).replace('.', ',')}`;
-    
-    const filteredAlbums = albumList.filter(album => album.price <= selectedValue);
+
+    // Filtra usando a lista global allAlbums
+    const filteredAlbums = allAlbums.filter(album => parseFloat(album.price) <= selectedValue);
     renderAlbums(filteredAlbums);
   });
 }
-

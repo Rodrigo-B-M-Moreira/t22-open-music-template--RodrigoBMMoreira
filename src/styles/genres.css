@@ -38,6 +38,6 @@
 }
 
 .genre-filter__button:hover {
-    background-color: var(--gray2);
+    background-color: var(--purple);
     color: var(--gray8);
 }
