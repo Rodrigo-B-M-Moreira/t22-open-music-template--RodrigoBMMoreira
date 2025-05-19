@@ -1,10 +1,11 @@
-/*albums.css*/
 .albums__container {
     width: 1024px;
     height: 1032px;
     padding-top: 5px;
     padding-bottom: 32px;
     gap: 19px;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .albums__title {
@@ -13,6 +14,7 @@
     line-height: 100%;
     letter-spacing: 0%;
     margin-bottom: 20px;
+    color: var(--text-color);
 }
 
 .albums__list {
@@ -28,7 +30,9 @@
     height: 455px;
     justify-content: space-between;
     border-radius: 20px;
-    background-color: var(--gray7);
+    background-color: var(--album-bg-color);
+    color: var(--album-text-color);
+    padding: 8px;
 }
 
 img {
@@ -44,14 +48,15 @@ img {
     vertical-align: middle;
     margin-top: 20px;
     margin-bottom: 15px;
+    color: var(--album-text-color);
 }
-
 
 .album__price {
     font-weight: 600;
     font-size: 19.2px;
     line-height: 100%;
     letter-spacing: 0%;
+    color: var(--album-text-color);
 }
 
 .album__info {
@@ -64,18 +69,12 @@ img {
     justify-content: space-between;
     margin-top: 15px;
     margin-bottom: 15px;
+    color: var(--album-text-color);
 }
 
 .album__purchase {
     display: flex;
     justify-content: space-between;
-}
-
-.album__price {
-    font-weight: 600;
-    font-size: 19.2px;
-    line-height: 100%;
-    letter-spacing: 0%;
 }
 
 .buy__album {
@@ -90,6 +89,7 @@ img {
     border-width: 1px;
     background-color: var(--purple);
     border-style: none;
+    color: var(--button-text-color);
 }
 
 .album-price__text {
@@ -97,5 +97,5 @@ img {
     font-size: 16px;
     line-height: 0px;
     letter-spacing: 0%;
-    color: white;
+    color: var(--button-text-color);
 }

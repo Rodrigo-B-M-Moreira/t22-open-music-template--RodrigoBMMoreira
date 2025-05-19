@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-:root{
-    --purple:#6F00FF;
-    --gray0:#15171A ;
+:root {
+    --purple: #6F00FF;
+    --gray0: #15171A;
     --gray1: #212529;
     --gray2: #2B2F33;
     --gray3: #868E96;
@@ -13,17 +13,36 @@
     --gray8: #FDFEFF;
 
     --font-family-default: 'Inter', sans-serif;
+
+   
+    --background-color: var(--gray8);
+    --text-color: var(--gray2);
+        --album-bg-color: var(--gray7);
+    --album-text-color: var(--gray2);
+    --button-text-color: white;
 }
 
+.dark-mode {
+    --background-color: var(--gray0);
+    --text-color: var(--gray7);
+    --album-bg-color: var(--gray2);
+    --album-text-color: var(--gray7);
+    --button-text-color: var(--gray8);
+    
+}
+
+
+
+
+
+main {
+    padding-top: 144px;
+}
 body {
     font-family: var(--font-family-default);
-    background-color: --gray8;
-    color: var(--gray2);
+    background-color: var(--background-color);
+    color: var(--text-color);
     max-width: 1024px;
     margin: 0 auto;
     padding: 0 16px;
-}
-
-main{
-   padding-top: 144px;
 }
