@@ -2,12 +2,12 @@ import { applyInputRangeStyle } from "./inputRange.js";
 import { fetchAlbums } from './api.js';
 import { initThemeToggle } from './theme.js';
 
-let allAlbums = []; // variável global para armazenar os álbuns da API
+let allAlbums = [];
 
 async function routine() {
   applyInputRangeStyle();
   initThemeToggle();
-  allAlbums = await fetchAlbums(); // busca dados da API
+  allAlbums = await fetchAlbums(); 
   renderAlbums(allAlbums);
   setupPriceFilter();
 }
@@ -19,7 +19,7 @@ function renderAlbums(albums) {
   albumsList.innerHTML = '';
 
   if (albums.length === 0) {
-    // Exibe mensagem ou imagem de "nenhum álbum encontrado"
+    
     albumsList.innerHTML = `
       <li class="no-albums">
         <img src="./src/assets/no-results.png" alt="Nenhum álbum encontrado" />
@@ -90,7 +90,6 @@ function setupPriceFilter() {
     const selectedValue = parseFloat(input.value);
     priceLabel.textContent = `R$ ${selectedValue.toFixed(2).replace('.', ',')}`;
 
-    // Filtra usando a lista global allAlbums
     const filteredAlbums = allAlbums.filter(album => parseFloat(album.price) <= selectedValue);
     renderAlbums(filteredAlbums);
   });

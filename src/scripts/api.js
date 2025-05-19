@@ -10,6 +10,6 @@ export async function fetchAlbums() {
     return data;
   } catch (error) {
     console.error('Erro ao buscar álbuns da API:', error);
-    return []; // Retorna array vazio em caso de erro para evitar falhas na renderização
+    return []; 
   }
 }

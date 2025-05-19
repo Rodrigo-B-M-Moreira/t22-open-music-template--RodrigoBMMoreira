@@ -14,10 +14,10 @@
 
     --font-family-default: 'Inter', sans-serif;
 
-   
+
     --background-color: var(--gray8);
     --text-color: var(--gray2);
-        --album-bg-color: var(--gray7);
+    --album-bg-color: var(--gray7);
     --album-text-color: var(--gray2);
     --button-text-color: white;
 }
@@ -28,7 +28,7 @@
     --album-bg-color: var(--gray2);
     --album-text-color: var(--gray7);
     --button-text-color: var(--gray8);
-    
+
 }
 
 
@@ -38,6 +38,7 @@
 main {
     padding-top: 144px;
 }
+
 body {
     font-family: var(--font-family-default);
     background-color: var(--background-color);
